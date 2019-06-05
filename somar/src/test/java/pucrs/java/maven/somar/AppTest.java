@@ -29,10 +29,13 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     *$ somar 10 20
+	* 30
+	* $ *
+
      */
     public void testApp()
     {
-        assertTrue( true );
+        assertEquals(30, Somar.somar(10, 20));
     }
 }
