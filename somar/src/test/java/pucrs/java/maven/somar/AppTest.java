@@ -29,7 +29,7 @@ public class AppTest
     }
 
     /**
-     *$ somar 10 20
+    * $ somar 10 20
 	* 30
 	* $ *
 
