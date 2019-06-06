@@ -8,11 +8,28 @@ public class Somar
 {
     public static void main( String[] args )
     {
+    	verificarNumeroDeParamentros(args);
+    	try {
+        	int a = Integer.parseInt(args[0]);
+            int b = Integer.parseInt(args[1]);
+            System.out.println(somar(a, b));
+
+		} catch (NumberFormatException e) {
+			System.err.println("Valor inválido!");
+			return;
+		
+	    } catch (IllegalArgumentException e) {
+	    	System.err.println("Número incorreto de argumentos!");
+			return;
+		}
     	
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[1]);
-        System.out.println(somar(a, b));
     }
+	static void verificarNumeroDeParamentros(String[] args) {
+		if(args.length != 2) {
+    		
+    		throw new IllegalArgumentException();
+    	}
+	}
     /**
      * 
      * @param a
